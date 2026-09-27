@@ -5,4 +5,8 @@ def test_greet():
     assert greet("World") == "Welcome, World!"
 
 def test_farewell():
-    assert farewell("World") == "Goodbye, World!" 
+    assert farewell("World") == "Goodbye, World!"
+
+def test_greet_empty_raises_error():
+    with pytest.raises(ValueError):
+        greet("")
