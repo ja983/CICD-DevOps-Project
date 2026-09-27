@@ -1,9 +1,10 @@
-print("Hello from DevOps Project 2")
 def greet(name):
+    if not name or not name.strip():
+        raise ValueError("Name cannot be empty")
     return f"Welcome, {name}!"
 
-print(greet("DevOps Engineer"))
 def farewell(name):
     return f"Goodbye, {name}!"
 
+print(greet("DevOps Engineer"))
 print(farewell("DevOps Engineer"))
